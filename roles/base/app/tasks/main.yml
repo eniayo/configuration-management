@@ -1,0 +1,14 @@
+---
+# tasks file for app
+
+- name: Upload website tarball
+  copy:
+    src: /path/to/website.tar.gz
+    dest: /tmp/website.tar.gz
+    mode: '0644'
+
+- name: Unzip website tarball
+  unarchive:
+    src: /tmp/website.tar.gz
+    dest: /var/www/html/
+    remote_src: yes
