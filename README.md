@@ -46,7 +46,8 @@ ansible --version
 Create an `inventory.ini` file with your server details:
 ```ini
 [webserver]
-64.23.148.88
+64.23.148.88 ansible_user=root ansible_ssh_private_key_file=~/.ssh/id_rsa ansible_python_interpreter=/usr/bin/python3
+
 ```
 
 ### 2. Run the Playbook
